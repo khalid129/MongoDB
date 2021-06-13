@@ -95,8 +95,36 @@
 👉 db.comments.find({member_since: {$gte: 90}})
 
 
+5️⃣ Find Method
+
+👉 db.CollectionName.find(query,projection)
 
 
+db.MERN.find({name:"React js"},{_id:0}).pretty()
 
+_id : 0 is a projection which mean that not show an id if it is 1 it means show id
+
+db.MERN.find({active:"true"}).limit(1).pretty()
+
+limit() function limit the number of rows.
+
+db.MERN.findOne({active:"true"})
+
+fineOne function find only one Document
+
+db.MERN.find({active:"true"}).limit(1).pretty().skip(1)
+
+skip() function skip the match which number is given 
+
+
+6️⃣ Update Method
+
+👉 db.CollectionName.updateOne(filter,update)
+👉 db.CollectionName.updateMany(filter,update)
+
+db.MERN.updateOne({name:"React js"},{$set: {type:"Full stack"}})
+$set operator replace the value of field
+
+db.MERN.updateMany({active:"true"},{$set: {active:false}}) 
 
 
